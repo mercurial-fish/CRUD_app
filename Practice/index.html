@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD App</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container">
+
+    <!--REVIEW the jumbotron class in Bootstrap has been removed in 5.3. Classes below were taken from documentation at https://getbootstrap.com/docs/5.0/migration/#jumbotron-->
+    <div id="new-house" class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h2 class="display-5 fw-bold">New House</h2>
+        <input type="text" id="new-house-name" class="form-control"> <br>
+        <button id="create-new-house" class="btn btn-primary form-control">Create</button>
+        </div>
+    </div>
+
+    <div id="app"> <!--NOTE gonna use this to add new elements to the DOM-->
+
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./index.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+
+</body>
+</html>

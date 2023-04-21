@@ -1,0 +1,93 @@
+<!--REVIEW 
+Create a full CRUD application of your choice using either an API or local Array.
+Use an existing API with AJAX to interact with it. 
+If you do not use an API, store the entities you will create, read, update, and delete in an array.
+Use a form to post new entities.
+Build a way for users to update or delete entities
+Use Bootstrap and CSS to style your project.
+-->
+
+<!--TODO
+My Mock API - https://6441e96533997d3ef904aac0.mockapi.io/CRUD_App_API/books
+    a. Remember to keep id and data-attribute for JS, and classes for CSS
+4. Focus, first and foremost on the HTML/JS-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading List</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="container">
+    <h1>My Reading List</h1>
+    <br>
+    <section class="row">
+        <form class="col-sm">
+            <div>
+                <h4>Add Book</h4>
+            </div>
+            <div>
+                <label for="addTitle" class="form-label">Title</label>
+                <input id="addTitle" class="form-control" type="text" placeholder="ex: The Giver">
+                <label for="addAuthor" class="form-label">Author</label>
+                <input id="addAuthor" class="form-control" type="text" placeholder="ex: Lois Lowry">
+                <label for="addGenre" class="form-label">Genre</label>
+                <input id="addGenre" class="form-control" type="text" placeholder="ex: Sci-Fi">
+                <label for="addDate" class="form-label">Date</label>
+                <input id="addDate" class="form-control" type="date">
+                <button id="addBook" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+        <br>
+        <form class="col-sm">
+            <div>
+                <h4>Update Book</h4>
+            </div>
+            <div>
+                <label for="updateID" class="form-label">ID</label>
+                <input id="updateID" class="form-control" type="text" placeholder="ex: 3">
+                <label for="updateTitle" class="form-label">Title</label>
+                <input id="updateTitle" class="form-control" type="text" placeholder="ex: The Giver">
+                <label for="updateAuthor" class="form-label">Author</label>
+                <input id="updateAuthor" class="form-control" type="text" placeholder="ex: Lois Lowry">
+                <label for="updateGenre" class="form-label">Genre</label>
+                <input id="updateGenre" class="form-control" type="text" placeholder="ex: Sci-Fi">
+                <label for="updateDate" class="form-label">Date</label>
+                <input id="updateDate" class="form-control" type="date">
+                <button id="updateBook" class="btn btn-success">Update</button>
+                
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <table class="table table-secondary table-striped">
+            <thead>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Date Added</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </section>
+<!--
+    Table
+        -thead
+        -th for each of the above
+        -make tbody and leave blank
+-->
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
