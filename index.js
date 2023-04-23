@@ -16,8 +16,7 @@ $.get(BOOKS_URL).then(data =>
                 <td>${book.title}</td>
                 <td>${book.author}</td>
                 <td>${book.genre}</td>
-                <td>${book.dateAdded}</td>
-                <td><button id="deleteBook" onclick="deleteBook(${book.id})">Delete</button></td>
+                <td><button onclick="deleteBook(${book.id})">Delete</button></td>
             </tr>
             `)
         )
@@ -28,7 +27,6 @@ $.get(BOOKS_URL).then(data =>
             title: $("#addTitle").val(),
             author: $("#addAuthor").val(),
             genre: $("#addGenre").val(),
-            dateAdded: $("#addDate").val()
         })
     });
 
@@ -38,3 +36,23 @@ $.get(BOOKS_URL).then(data =>
             method: "DELETE",
         });
     };
+
+    function updateList() {
+
+        let id = $("#updateID").val();
+      
+        fetch(`${BOOKS_URL}/${id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify ({
+            title: $("#updateTitle").val(),
+            author: $("#updateAuthor").val(),
+            genre: $("#updateGenre").val(),
+          })
+        })
+      };
+      
+      
+      $("#updateBook").on("click", updateList);
