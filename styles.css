@@ -3,4 +3,58 @@ Use an existing API with AJAX to interact with it.
 If you do not use an API, store the entities you will create, read, update, and delete in an array.
 Use a form to post new entities.
 Build a way for users to update or delete entities
-Use Bootstrap and CSS to style your project.
+Use Bootstrap and CSS to style your project. */
+
+/*NOTE - created a variable for the background color so I could change it one place vs. multiple places. Ultimately ended up
+using different colors for the background of the cards, but if I were to change that or add to the code in the future, it would give me
+that option*/
+
+:root {
+    --main-color: rgb(244, 190, 247);
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.header {
+    background-color: violet;
+    border: .25rem solid blueviolet;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    font-size: 3rem;
+    font-family: "Itim", cursive;
+    font-weight: bold;
+}
+
+.formHeader {
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: "Itim", cursive;
+    font-weight: bolder;
+}
+
+.form-label {
+    color: white;
+    text-align: center;
+    font-size: 22px;
+    font-family: "Itim", cursive;
+    font-weight: bolder;
+}
+
+/*NOTE - designed the cards to be the same size so it looks a little less lopsided*/
+
+.card {
+    display: flex;
+    background-color: violet;
+    border: .25rem solid blueviolet;
+    height: 600px;
+}
+
+
+
+
